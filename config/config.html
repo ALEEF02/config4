@@ -8,13 +8,13 @@
 </head>
 <body>
   <div class='item-container'>
-    <h1 class='title'>Serrano Middle School<br>Configuration Page</h1>
+    <h1 class='title'>Note Taker<br>Configuration Page</h1>
   </div>
 
   <div class='item-container'>
     <div class='item-container-content'>
       <div class='item'>
-        Enter your classes (E.g. History Room 300) Does not have to be in this format
+        Enter your notes
 		</div>
     </div>
   </div>
@@ -22,29 +22,52 @@
   <div class='item-container'>
     <div class='item-container-header'>Classes</div>
     <div class='item-container-content'>
+      <label class="item">
+      Text Size
+      <select name="text" dir='rtl' class="item-select">
+        <option class="item-select-option" selected>Small</option>
+        <option class="item-select-option">Large</option>
+      </select>
+      </label>
       <label class='item'>
-        Period 1
-        <input id='p1' type='text' class='item-input' placeholder='Period 1'>
+        Note 1
+        <input id='n1' type='text' class='item-input' placeholder='Note 1'>
       </label><br>
       <label class='item'>
-        Period 2
-        <input id='p2' type='text' class='item-input' placeholder='Period 2'>
+        Note 2
+        <input id='n2' type='text' class='item-input' placeholder='Note 2'>
       </label><br>
 	  <label class='item'>
-        Period 3
-        <input id='p3' type='text' class='item-input' placeholder='Period 3'>
+        Note 3
+        <input id='n3' type='text' class='item-input' placeholder='Note 3'>
       </label><br>
 	  <label class='item'>
-        Period 4
-        <input id='p4' type='text' class='item-input' placeholder='Period 4'>
+        Note 4
+        <input id='n4' type='text' class='item-input' placeholder='Note 4'>
       </label><br>
 	  <label class='item'>
-        Period 5
-        <input id='p5' type='text' class='item-input' placeholder='Period 5'>
+        Note 5
+        <input id='n5' type='text' class='item-input' placeholder='Note 5'>
       </label><br>
 	  <label class='item'>
-        Period 6
-        <input id='p6' type='text' class='item-input' placeholder='Period 6'>
+        Note 6
+        <input id='n6' type='text' class='item-input' placeholder='Note 6'>
+      </label>
+      <label class='item'>
+        Note 7
+        <input id='n7' type='text' class='item-input' placeholder='Note 7'>
+      </label>
+      <label class='item'>
+        Note 8
+        <input id='n8' type='text' class='item-input' placeholder='Note 8'>
+      </label>
+      <label class='item'>
+        Note 9
+        <input id='n9' type='text' class='item-input' placeholder='Note 9'>
+      </label>
+      <label class='item'>
+        Note 10
+        <input id='n10' type='text' class='item-input' placeholder='Note 10'>
       </label>
     </div>
     <div class='item-container-footer'>
@@ -61,23 +84,33 @@
   <script src='js/slate.min.js'></script>
   <script>
 	function getData() {
-	var periods = {
-  period1: null,
-  period2: null, 
-  period3: null,
-  period4: null,
-  period5: null,
-  period6: null
+	var stuff = {
+  note1: null,
+  note2: null, 
+  note3: null,
+  note4: null,
+  note5: null,
+  note6: null,
+  note7: null, 
+  note8: null,
+  note9: null,
+  note10: null,
+  text_size: null
 }
-	periods.period1 = $('#p1').val();
-	periods.period2 = $('#p2').val();
-	periods.period3 = $('#p3').val();
-	periods.period4 = $('#p4').val();
-	periods.period5 = $('#p5').val();
-	periods.period6 = $('#p6').val();
+	stuff.note1 = $('#n1').val();
+	stuff.note2 = $('#n2').val();
+	stuff.note3 = $('#n3').val();
+	stuff.note4 = $('#n4').val();
+	stuff.note5 = $('#n5').val();
+	stuff.note6 = $('#n6').val();
+	stuff.note7 = $('#n7').val();
+	stuff.note8 = $('#n8').val();
+	stuff.note9 = $('#n9').val();
+	stuff.note10 = $('#n10').val();
+	stuff.text_size = $('#rtl').val();
 	
-	console.log(JSON.stringify(periods));
-	return periods;
+	console.log(JSON.stringify(stuff));
+	return stuff;
 }
 	$('#submitButton').on("click", function() {
 	getData();
