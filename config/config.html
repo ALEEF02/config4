@@ -24,7 +24,7 @@
     <div class='item-container-content'>
       <label class="item">
       Text Size
-      <select name="text" dir='rtl' class="item-select">
+      <select name="text" dir='rtl' id='ts' class="item-select">
         <option class="item-select-option" selected>Small</option>
         <option class="item-select-option">Large</option>
       </select>
@@ -157,7 +157,7 @@
 	stuff.note8_title = $('#t8').val();
 	stuff.note9_title = $('#t9').val();
 	stuff.note10_title = $('#t10').val();
-	stuff.text_size = $('#rtl').val();
+	stuff.text_size = $('#ts').val();
 	
 	console.log(JSON.stringify(stuff));
 	return stuff;
